@@ -1,0 +1,92 @@
+{
+    // Core settings:
+    "audioCues.volume": 0,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.fontSize": 18,
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.lineNumbers": "relative",
+    "editor.rulers": [],
+    "editor.minimap.enabled": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.smoothScrolling": true,
+    "editor.wordWrap": "off",
+    "explorer.autoReveal": false,
+    "extensions.ignoreRecommendations": true,
+    "files.exclude": {
+        "**/target/": true
+    },
+    "files.watcherExclude": {
+        "**/target/": true
+    },
+    "git.inputValidationSubjectLength": 72,
+    "git.mergeEditor": false,
+    "search.exclude": {
+        "**/target/": true
+    },
+    "search.useGlobalIgnoreFiles": true,
+    "security.workspace.trust.banner": "never",
+    "telemetry.telemetryLevel": "off",
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.enablePersistentSessions": false,
+    "terminal.integrated.persistentSessionReviveProcess": "never",
+    "window.menuBarVisibility": "toggle",
+    "window.newWindowDimensions": "inherit",
+    "window.title": "${rootName}",
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.editor.untitled.hint": "hidden",
+    "workbench.iconTheme": "vs-seti",
+    "workbench.list.smoothScrolling": true,
+    "workbench.startupEditor": "none",
+
+    // Extension specific:
+    "gitblame.infoMessageFormat": "[#${commit.hash_short, 7}] ${commit.summary}",
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.configuration.runtimes": [],
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.debug.settings.enableRunDebugCodeLens": false,
+    "java.eclipse.downloadSources": true,
+    "java.recommendations.dependency.analytics.show": false,
+    "notebook.lineNumbers": "on",
+    "python.formatting.provider": "black",
+    "redhat.telemetry.enabled": false,
+    "vim.useSystemClipboard": true,
+    "vim.vimrc.enable": true,
+
+    // Language specific:
+    "[java]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+        "editor.formatOnSave": true
+    },
+    "[go]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+        "editor.formatOnSave": true
+	},
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+        "editor.formatOnSave": true
+    },
+    "[xml]": {
+        "editor.formatOnSave": true
+    },
+
+    // Global run/debug launch settings:
+    "launch": {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "type": "java",
+                "name": "Open Liberty",
+                "request": "attach",
+                "hostName": "localhost",
+                "port": 7777
+            }
+        ]
+    }
+}

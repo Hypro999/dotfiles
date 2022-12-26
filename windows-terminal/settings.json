@@ -1,0 +1,76 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": [
+        {"keys": "alt+1", "command": {"action": "switchtotab", "index": 0}},
+        {"keys": "alt+2", "command": {"action": "switchtotab", "index": 1}},
+        {"keys": "alt+3", "command": {"action": "switchtotab", "index": 2}},
+        {"keys": "alt+4", "command": {"action": "switchtotab", "index": 3}},
+        {"keys": "alt+5", "command": {"action": "switchtotab", "index": 4}},
+        {"keys": "alt+6", "command": {"action": "switchtotab", "index": 5}},
+        {"keys": "alt+7", "command": {"action": "switchtotab", "index": 6}},
+        {"keys": "alt+8", "command": {"action": "switchtotab", "index": 7}},
+        {"keys": "alt+9", "command": {"action": "switchtotab", "index": 8}},
+        {"keys": "ctrl+shift+t", "command": "duplicatetab"},
+        {"keys": "ctrl+l", "command": "clearBuffer"}
+    ],
+    "defaultprofile": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+    "copyonselect": false,
+    "copyformatting": false,
+    "initialcols": 140,
+    "initialrows": 30,
+    "profiles": {
+        "defaults": {
+            "bellstyle": "none",
+            "closeonexit": "always",
+            "colorscheme": "nord",
+            "font": {
+                "face": "consolas",
+                "size": 12
+            },
+            "opacity": 80,
+            "padding": "1, 1, 1, 1",
+            "scrollbarstate": "hidden"
+        },
+        "list": [
+            {
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "name": "command prompt"
+            },
+            {
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "name": "windows powershell"
+            },
+            {
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "name": "wsl",
+                "source": "windows.terminal.wsl"
+            }
+        ]
+    },
+    "schemes": [
+        {
+            "name": "nord",
+            "background": "#2e3440",
+            "black": "#3b4252",
+            "blue": "#81a1c1",
+            "brightblack": "#4c566a",
+            "brightblue": "#81a1c1",
+            "brightcyan": "#8fbcbb",
+            "brightgreen": "#a3be8c",
+            "brightpurple": "#b48ead",
+            "brightred": "#bf616a",
+            "brightwhite": "#eceff4",
+            "brightyellow": "#ebcb8b",
+            "cursorcolor": "#ffffff",
+            "cyan": "#88c0d0",
+            "foreground": "#d8dee9",
+            "green": "#a3be8c",
+            "purple": "#b48ead",
+            "red": "#bf616a",
+            "selectionbackground": "#ffffff",
+            "white": "#e5e9f0",
+            "yellow": "#ebcb8b"
+        }
+    ]
+}
