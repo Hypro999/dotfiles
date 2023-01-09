@@ -13,3 +13,4 @@
 [alias]
 	logx = log --oneline --decorate --graph
 	verify = log -n 1 --show-signature
+	patch = commit --amend --no-edit
