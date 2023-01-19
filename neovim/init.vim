@@ -4,6 +4,7 @@ set clipboard=unnamedplus
 set completeopt=longest,menuone,noinsert
 set encoding=utf-8
 set hidden
+set ignorecase
 set laststatus=0
 set mouse=a
 set nohlsearch
