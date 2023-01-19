@@ -12,6 +12,7 @@ set number
 set relativenumber
 set shiftwidth=4
 set shortmess=Ic
+set smartcase
 set splitbelow
 set splitright
 set tabstop=4
