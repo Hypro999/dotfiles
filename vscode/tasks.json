@@ -5,13 +5,19 @@
             "label": "Start Tomcat",
             "type": "shell",
             "command": "${env:CATALINA_HOME}/bin/startup",
-            "problemMatcher": []
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "silent",
+            }
         },
         {
             "label": "Stop Tomcat",
             "type": "shell",
             "command": "${env:CATALINA_HOME}/bin/shutdown",
-            "problemMatcher": []
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "silent",
+            }
         }
     ]
 }
