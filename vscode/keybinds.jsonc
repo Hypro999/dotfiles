@@ -25,6 +25,10 @@
     "command": "editor.action.sourceAction",
     "when": "editorTextFocus && !editorReadonly"
   },
+  {
+    "key": "ctrl+alt+p",
+    "command": "workbench.action.tasks.runTask"
+  },
 
   // Terminal keybinds:
   {
