@@ -87,6 +87,7 @@ call plug#begin()
 	Plug 'tpope/vim-fugitive'
 	Plug 'AndrewRadev/linediff.vim'
 
+	Plug 'sainnhe/everforest'
 	Plug 'joshdick/onedark.vim'
 	Plug 'arcticicestudio/nord-vim'
 	Plug 'lifepillar/vim-solarized8'
