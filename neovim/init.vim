@@ -101,7 +101,7 @@ call plug#end()
 
 " Colorscheme.
 set termguicolors
-colorscheme nord
+colorscheme edge
 
 " Configure vim-commentary.
 autocmd FileType c,cpp,cuda setlocal commentstring=//\ %s
