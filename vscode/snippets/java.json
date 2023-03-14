@@ -1,0 +1,11 @@
+{
+	"New ObjectMapper": {
+		"prefix": "newom",
+		"body": [
+			"ObjectMapper om = new ObjectMapper()",
+			"        .setSerializationInclusion(Include.NON_NULL)",
+			"        .setDefaultPrettyPrinter(new DefaultPrettyPrinter());"
+		],
+		"description": "Build a new ObjectMapper instance."
+	}
+}
