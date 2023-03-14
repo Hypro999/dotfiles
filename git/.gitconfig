@@ -12,5 +12,5 @@
 	autoSetupRemote = true
 [alias]
 	logx = log --oneline --decorate --graph
-	verify = log -n 1 --show-signature
+	check = log -n 1 --show-signature
 	patch = commit --amend --no-edit
