@@ -3,8 +3,7 @@
 		"prefix": "newom",
 		"body": [
 			"ObjectMapper om = new ObjectMapper()",
-			"        .setSerializationInclusion(Include.NON_NULL)",
-			"        .setDefaultPrettyPrinter(new DefaultPrettyPrinter());"
+			"        .setSerializationInclusion(Include.NON_NULL);",
 		],
 		"description": "Build a new ObjectMapper instance."
 	}
