@@ -88,7 +88,6 @@ call plug#begin()
 	Plug 'AndrewRadev/linediff.vim'
 
 	Plug 'sainnhe/edge'
-	Plug 'sainnhe/everforest'
 
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
