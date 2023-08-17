@@ -1,11 +1,14 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
+
     "defaultProfile": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+
     "copyOnSelect": false,
     "copyFormatting": false,
     "initialCols": 140,
     "initialRows": 30,
+
     "profiles": {
         "defaults": {
             "bellStyle": "none",
@@ -36,6 +39,7 @@
             }
         ]
     },
+
     "schemes": [
         {
             "name": "Campbell",
@@ -176,6 +180,7 @@
             "yellow": "#EBCB8B"
         }
     ],
+
     "actions": [
         {"keys": "alt+1", "command": {"action": "switchToTab", "index": 0}},
         {"keys": "alt+2", "command": {"action": "switchToTab", "index": 1}},
