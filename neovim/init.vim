@@ -95,6 +95,7 @@ call plug#begin()
 	if has('nvim')
 		Plug 'nvim-lua/plenary.nvim'
 		Plug 'nvim-telescope/telescope.nvim'
+		Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 	endif
 call plug#end()
 
