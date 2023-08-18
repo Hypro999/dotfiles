@@ -28,14 +28,9 @@
                 "name": "Command Prompt"
             },
             {
-                "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
-                "name": "PowerShell",
-                "source": "Windows.Terminal.PowershellCore"
-            },
-            {
                 "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
                 "name": "WSL",
-                "source": "windows.terminal.wsl"
+                "commandline": "wsl.exe"
             }
         ]
     },
