@@ -112,6 +112,10 @@ let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#whitespace#checks=[]
 let g:airline#extensions#tabline#formatter='unique_tail'
 
+" Command to format JSON automatically.
+" Requires the jq command line tool to be on PATH.
+nnoremap <silent> <leader>jq :%!jq<CR>
+
 " Neovim specific configuration using lua.
 if has('nvim')
 lua << 	EOF
