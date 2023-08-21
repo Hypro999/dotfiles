@@ -4,6 +4,7 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.cursorSmoothCaretAnimation": true,
     // "editor.detectIndentation": false,
+    "editor.fontFamily": "Consolas, 'Courier New', monospace",
     "editor.fontSize": 18,
     "editor.inlayHints.enabled": "offUnlessPressed",
     // "editor.insertSpaces": true,
