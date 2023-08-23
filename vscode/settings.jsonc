@@ -37,6 +37,7 @@
     "window.menuBarVisibility": "toggle",
     "window.newWindowDimensions": "inherit",
     "window.title": "${rootName}",
+    "workbench.activityBar.visible": false,
     "workbench.colorTheme": "Default Dark+",
     "workbench.editor.untitled.hint": "hidden",
     "workbench.iconTheme": "vs-seti",
