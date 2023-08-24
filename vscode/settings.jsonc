@@ -47,6 +47,7 @@
     // Extension specific:
     "boot-java.rewrite.reconcile": true,
     "gitblame.infoMessageFormat": "[#${commit.hash_short, 7}] ${commit.summary}",
+    "gitblame.statusBarMessageFormat": "${author.name} (${time.ago})",
     "java.compile.nullAnalysis.mode": "automatic",
     "java.configuration.runtimes": [],
     "java.configuration.updateBuildConfiguration": "automatic",
