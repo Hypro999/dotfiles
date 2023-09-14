@@ -86,6 +86,7 @@ call plug#begin()
 	Plug 'tpope/vim-repeat'
 	Plug 'tpope/vim-fugitive'
 	Plug 'AndrewRadev/linediff.vim'
+	Plug 'wesQ3/vim-windowswap'
 
 	Plug 'sainnhe/edge'
 
