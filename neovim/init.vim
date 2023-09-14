@@ -53,14 +53,16 @@ nnoremap <silent> <leader>c :call Config()<CR>
 tnoremap <Esc> <C-\><C-n>
 
 " Make it easier to move between panes.
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
 nnoremap <C-Down> <C-W><C-J>
 nnoremap <C-Up> <C-W><C-K>
 nnoremap <C-Right> <C-W><C-L>
 nnoremap <C-Left> <C-W><C-H>
+
+" Make it easier to scroll by half-widths.
+nnoremap <C-J> <C-d>
+nnoremap <C-K> <C-u>
+nnoremap <C-L> zL
+nnoremap <C-H> zH
 
 " Faster keybinds for write/save.
 nnoremap <silent> <leader>s :w <CR>
