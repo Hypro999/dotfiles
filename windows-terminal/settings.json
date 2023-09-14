@@ -62,7 +62,6 @@
     ],
 
     "actions": [
-        {"keys": "ctrl+l", "command": "clearBuffer"},
         {"keys": "ctrl+shift+t", "command": "duplicateTab"},
         {"keys": "alt+1", "command": {"action": "switchToTab", "index": 0}},
         {"keys": "alt+2", "command": {"action": "switchToTab", "index": 1}},
