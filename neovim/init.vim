@@ -72,8 +72,8 @@ nnoremap <silent> <leader>w :w <CR>
 nnoremap <silent> <leader>q :q! <CR>
 
 " Keybinds for window/pane swapping
- nnoremap <silent> <leader>yw :call WindowSwap#MarkWindowSwap()<CR>
- nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>
+nnoremap <silent> <leader>yw :call WindowSwap#MarkWindowSwap()<CR>
+nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>
 
 " Keybind for trimming trailing whitespace.
 nnoremap <silent> <leader><space> :silent! %s/\s\+$//g<CR>
