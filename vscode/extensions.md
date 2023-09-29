@@ -12,6 +12,9 @@
 - PKief.material-icon-theme
 
 ### Languages
+- C/C++
+    - llvm-vs-code-extensions.vscode-clangd
+
 - Go
     - golang.go
 
