@@ -1,13 +1,5 @@
 [
-  // Core keybinds:
-  {
-    "key": "ctrl+k r",
-    "command": "workbench.action.openRecent"
-  },
-  {
-    "key": "ctrl+k ctrl+r",
-    "command": "workbench.action.openRecent"
-  },
+  // Core:
   {
     "key": "ctrl+tab",
     "command": "workbench.action.nextEditor"
@@ -17,18 +9,16 @@
     "command": "workbench.action.previousEditor"
   },
   {
-    "key": "alt+a",
-    "command": "editor.action.sourceAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-      "key": "ctrl+p",
-      "command": "-extension.vim_ctrl+p",
-      "when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
-  },
-  {
     "key": "ctrl+alt+p",
     "command": "workbench.action.tasks.runTask"
+  },
+  {
+    "key": "ctrl+k r",
+    "command": "workbench.action.openRecent"
+  },
+  {
+    "key": "ctrl+k ctrl+r",
+    "command": "workbench.action.openRecent"
   },
   {
     "key": "ctrl+\\",
@@ -42,17 +32,7 @@
     "key": "ctrl+shift+\\",
     "command": "workbench.action.toggleActivityBarVisibility"
   },
-  {
-    "key": "ctrl+shift+\\",
-    "command": "-editor.action.jumpToBracket",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+shift+\\",
-    "command": "-workbench.action.terminal.focusTabs",
-    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported || terminalHasBeenCreated && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
-  },
-  // Terminal keybinds:
+  // Terminal:
   {
     "key": "ctrl+up",
     "command": "workbench.action.terminal.focusPrevious",
@@ -77,5 +57,21 @@
     "key": "alt+`",
     "command": "workbench.action.toggleMaximizedPanel",
     "when": "terminalFocus && terminalProcessSupported"
+  },
+  // Unbind:
+  {
+      "key": "ctrl+p",
+      "command": "-extension.vim_ctrl+p",
+      "when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+  },
+  {
+    "key": "ctrl+shift+\\",
+    "command": "-editor.action.jumpToBracket",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+\\",
+    "command": "-workbench.action.terminal.focusTabs",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported || terminalHasBeenCreated && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
   }
 ]
