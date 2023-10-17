@@ -58,12 +58,6 @@ nnoremap <C-Up> <C-W><C-K>
 nnoremap <C-Right> <C-W><C-L>
 nnoremap <C-Left> <C-W><C-H>
 
-" Make it easier to scroll by half-widths.
-nnoremap <C-J> <C-d>
-nnoremap <C-K> <C-u>
-nnoremap <C-L> zL
-nnoremap <C-H> zH
-
 " Faster keybinds for write/save.
 nnoremap <silent> <leader>s :w <CR>
 nnoremap <silent> <leader>w :w <CR>
