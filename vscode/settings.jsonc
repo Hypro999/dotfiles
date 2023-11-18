@@ -65,6 +65,9 @@
     "java.recommendations.dependency.analytics.show": false,
     "notebook.lineNumbers": "on",
     "redhat.telemetry.enabled": false,
+    "spring-boot.ls.problem.version-validation.UPDATE_LATEST_MAJOR_VERSION": "IGNORE",
+    "spring-boot.ls.problem.version-validation.UPDATE_LATEST_MINOR_VERSION": "IGNORE",
+    "spring-boot.ls.problem.version-validation.UPDATE_LATEST_PATCH_VERSION": "IGNORE",
     "vim.useSystemClipboard": true,
     "vim.vimrc.enable": true,
 
