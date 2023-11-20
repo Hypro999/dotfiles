@@ -8,7 +8,7 @@
 - donjayamanne.githistory
 
 ### Themes
-- sainnhe.edge
+- github.github-vscode-theme
 - PKief.material-icon-theme
 
 ### Languages
