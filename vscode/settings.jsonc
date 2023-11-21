@@ -16,6 +16,7 @@
     "editor.tabSize": 4,
     "editor.wordWrap": "off",
     "explorer.autoReveal": false,
+    "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "extensions.ignoreRecommendations": true,
     "files.exclude": {
