@@ -88,7 +88,8 @@ call plug#begin()
 	Plug 'AndrewRadev/linediff.vim'
 	Plug 'wesQ3/vim-windowswap'
 
-	Plug 'Hypro999/ayu-vim' 
+	Plug 'Hypro999/ayu-vim'
+	Plug 'Hypro999/edge'
 
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
