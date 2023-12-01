@@ -88,7 +88,7 @@ call plug#begin()
 	Plug 'AndrewRadev/linediff.vim'
 	Plug 'wesQ3/vim-windowswap'
 
-	Plug 'sainnhe/edge'
+	Plug 'Hypro999/ayu-vim' 
 
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
@@ -102,7 +102,8 @@ call plug#end()
 
 " Colorscheme.
 set termguicolors
-colorscheme edge
+let g:ayucolor='mirage'
+colorscheme ayu
 
 " Configure vim-commentary.
 autocmd FileType c,cpp,cuda setlocal commentstring=//\ %s
