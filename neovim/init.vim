@@ -59,7 +59,6 @@ nnoremap <C-Right> <C-W><C-L>
 nnoremap <C-Left> <C-W><C-H>
 
 " Faster keybinds for write/save.
-nnoremap <silent> <leader>s :w <CR>
 nnoremap <silent> <leader>w :w <CR>
 
 " Faster keybind for quit (force).
@@ -85,9 +84,11 @@ call plug#begin()
 	Plug 'tpope/vim-unimpaired'
 	Plug 'tpope/vim-repeat'
 	Plug 'tpope/vim-fugitive'
+
 	Plug 'AndrewRadev/linediff.vim'
 	Plug 'wesQ3/vim-windowswap'
 
+	Plug 'owickstrom/vim-colors-paramount'
 	Plug 'sainnhe/edge'
 
 	Plug 'vim-airline/vim-airline'
@@ -102,13 +103,14 @@ call plug#end()
 
 " Colorscheme.
 set termguicolors
-colorscheme edge
+colorscheme paramount
 
 " Configure vim-commentary.
 autocmd FileType c,cpp,cuda setlocal commentstring=//\ %s
 autocmd FileType sql setlocal commentstring=--\ %s
 
 " Configure vim-airline.
+let g:airline_theme='deus'
 let g:airline_powerline_fonts=0
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#whitespace#checks=[]
