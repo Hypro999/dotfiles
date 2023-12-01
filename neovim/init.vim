@@ -88,7 +88,6 @@ call plug#begin()
 	Plug 'AndrewRadev/linediff.vim'
 	Plug 'wesQ3/vim-windowswap'
 
-	Plug 'owickstrom/vim-colors-paramount'
 	Plug 'sainnhe/edge'
 
 	Plug 'vim-airline/vim-airline'
@@ -103,7 +102,7 @@ call plug#end()
 
 " Colorscheme.
 set termguicolors
-colorscheme paramount
+colorscheme edge
 
 " Configure vim-commentary.
 autocmd FileType c,cpp,cuda setlocal commentstring=//\ %s
