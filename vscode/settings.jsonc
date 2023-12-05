@@ -3,8 +3,8 @@
     "audioCues.volume": 0,
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.cursorSmoothCaretAnimation": "on",
-    "editor.detectIndentation": true,
-    "editor.fontFamily": "SF Mono Regular",
+    "editor.detectIndentation": false,
+    "editor.fontFamily": "DejaVu Sans Mono",
     "editor.fontSize": 14,
     "editor.inlayHints.enabled": "offUnlessPressed",
     "editor.insertSpaces": true,
@@ -20,19 +20,23 @@
     "explorer.confirmDragAndDrop": false,
     "extensions.ignoreRecommendations": true,
     "files.exclude": {
+        "**/.vscode": true,
         "**/target/": true
     },
     "files.watcherExclude": {
+        "**/.vscode": true,
         "**/target/": true
     },
     "git.inputValidationSubjectLength": 72,
     "git.mergeEditor": false,
     "search.exclude": {
+        "**/.vscode": true,
         "**/target/": true
     },
     "search.useGlobalIgnoreFiles": true,
     "security.workspace.trust.banner": "never",
     "telemetry.telemetryLevel": "off",
+    "terminal.external.osxExec": "iTerm2.app",
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "terminal.integrated.enablePersistentSessions": false,
     "terminal.integrated.persistentSessionReviveProcess": "never",
@@ -60,10 +64,10 @@
     "java.configuration.runtimes": [],
     "java.configuration.updateBuildConfiguration": "automatic",
     "java.debug.settings.enableRunDebugCodeLens": false,
+    "java.debug.settings.forceBuildBeforeLaunch": true,
     "java.eclipse.downloadSources": true,
     "java.format.settings.url": "~/.eclipse-formatter.xml",
     "java.maven.downloadSources": true,
-    "java.recommendations.dependency.analytics.show": false,
     "notebook.lineNumbers": "on",
     "redhat.telemetry.enabled": false,
     "spring-boot.ls.problem.version-validation.UPDATE_LATEST_MAJOR_VERSION": "IGNORE",
@@ -72,10 +76,23 @@
     "vim.foldfix": true,
     "vim.useSystemClipboard": true,
     "vim.vimrc.enable": true,
-    "vim.vimrc.path": "",
+    "vim.vimrc.path": "~/.config/nvim/init.vim",
 
     // Language specific:
+    "[go]": {
+        "editor.insertSpaces": false
+    },
     "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter"
+        "editor.defaultFormatter": "ms-python.black-formatter",
+    },
+    "[css][html][javascript][scss][typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2
+    },
+    "[json][jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features",
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
     }
 }
