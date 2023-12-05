@@ -57,6 +57,7 @@
     // Extension specific:
     "gitblame.infoMessageFormat": "[#${commit.hash_short, 7}] ${commit.summary}",
     "gitblame.statusBarMessageFormat": "${author.name} (${time.ago})",
+    "go.toolsManagement.checkForUpdates": "off",
     "java.codeGeneration.insertionLocation": "lastMember",
     "java.compile.nullAnalysis.mode": "automatic",
     "java.completion.importOrder": [
