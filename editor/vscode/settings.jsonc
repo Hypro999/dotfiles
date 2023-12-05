@@ -2,6 +2,7 @@
     // Core settings:
     "audioCues.volume": 0,
     "diffEditor.ignoreTrimWhitespace": false,
+    "editor.accessibilitySupport": "off",
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.detectIndentation": false,
     "editor.fontFamily": "DejaVu Sans Mono",
@@ -21,19 +22,19 @@
     "extensions.ignoreRecommendations": true,
     "files.exclude": {
         "**/.vscode": true,
-        "**/target/": true,
+        "**/target": true,
         "**/__pycache__": true
     },
     "files.watcherExclude": {
         "**/.vscode": true,
-        "**/target/": true,
+        "**/target": true,
         "**/__pycache__": true
     },
     "git.inputValidationSubjectLength": 72,
     "git.mergeEditor": false,
     "search.exclude": {
         "**/.vscode": true,
-        "**/target/": true,
+        "**/target": true,
         "**/__pycache__": true
     },
     "search.useGlobalIgnoreFiles": true,
@@ -43,6 +44,7 @@
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     "terminal.integrated.enablePersistentSessions": false,
     "terminal.integrated.persistentSessionReviveProcess": "never",
+    "terminal.integrated.scrollback": 100000,
     "window.menuBarVisibility": "toggle",
     "window.newWindowDimensions": "inherit",
     "window.title": "${rootName}",
