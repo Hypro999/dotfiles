@@ -4,7 +4,7 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.detectIndentation": true,
-    "editor.fontFamily": "Consolas, 'Courier New', monospace",
+    "editor.fontFamily": "SF Mono Regular",
     "editor.fontSize": 14,
     "editor.inlayHints.enabled": "offUnlessPressed",
     "editor.insertSpaces": true,
@@ -72,6 +72,7 @@
     "vim.foldfix": true,
     "vim.useSystemClipboard": true,
     "vim.vimrc.enable": true,
+    "vim.vimrc.path": "",
 
     // Language specific:
     "[python]": {
