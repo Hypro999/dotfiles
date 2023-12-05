@@ -18,16 +18,24 @@
 - Go
     - golang.go
 
-- Java
-    - redhat.java
-    - vscjava.vscode-java-debug
-    - vscjava.vscode-java-test
+- Java (and Spring)
+	- redhat.java
+	- vscjava.vscode-java-debug
+	- vscjava.vscode-java-test
+	- vscjava.vscode-java-dependency
+	- vscjava.vscode-maven
+	- vscjava.vscode-gradle
+	- vmware.vscode-spring-boot
+	- vscjava.vscode-spring-boot-dashboard
 
 - Python
     - ms-python.python
     - ms-python.vscode-pylance
     - ms-python.black-formatter
     - ms-python.isort
+
+- HTML/(S)CSS/JavaScript:
+    - esbenp.prettier-vscode
 
 - Config
     - redhat.vscode-xml
