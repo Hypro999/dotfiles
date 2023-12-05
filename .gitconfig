@@ -1,6 +1,7 @@
 [user]
 	name = Hemanth Alluri
 	email = hdrive1999@gmail.com
+	signingkey = 8608A36AE9289ECE
 [core]
 	editor = nvim
 [fetch]
