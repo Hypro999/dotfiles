@@ -21,23 +21,26 @@
     "extensions.ignoreRecommendations": true,
     "files.exclude": {
         "**/.vscode": true,
-        "**/target/": true
+        "**/target/": true,
+        "**/__pycache__": true
     },
     "files.watcherExclude": {
         "**/.vscode": true,
-        "**/target/": true
+        "**/target/": true,
+        "**/__pycache__": true
     },
     "git.inputValidationSubjectLength": 72,
     "git.mergeEditor": false,
     "search.exclude": {
         "**/.vscode": true,
-        "**/target/": true
+        "**/target/": true,
+        "**/__pycache__": true
     },
     "search.useGlobalIgnoreFiles": true,
     "security.workspace.trust.banner": "never",
     "telemetry.telemetryLevel": "off",
     "terminal.external.osxExec": "iTerm2.app",
-    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
     "terminal.integrated.enablePersistentSessions": false,
     "terminal.integrated.persistentSessionReviveProcess": "never",
     "window.menuBarVisibility": "toggle",
