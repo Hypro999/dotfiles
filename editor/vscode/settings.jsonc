@@ -40,7 +40,6 @@
     "search.useGlobalIgnoreFiles": true,
     "security.workspace.trust.banner": "never",
     "telemetry.telemetryLevel": "off",
-    "terminal.external.osxExec": "iTerm2.app",
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     "terminal.integrated.enablePersistentSessions": false,
     "terminal.integrated.persistentSessionReviveProcess": "never",
