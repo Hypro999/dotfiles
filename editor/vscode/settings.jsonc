@@ -55,6 +55,18 @@
     "workbench.startupEditor": "none",
 
     // Extension specific:
+    "externalFormatters.languages": {
+        "java": {
+            "command": "java",
+            "arguments": [
+                "-jar",
+                "~/.local/jar/google-java-format-1.19.2-all-deps.jar",
+                // You will probably need to expand the ~.
+                // child_process.spawn() handles args with ~ in a weird way?
+                "-"
+            ]
+        }
+    },
     "gitblame.infoMessageFormat": "[#${commit.hash_short, 7}] ${commit.summary}",
     "gitblame.statusBarMessageFormat": "${author.name} (${time.ago})",
     "go.toolsManagement.checkForUpdates": "off",
@@ -90,6 +102,9 @@
     },
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "[java]": {
+        "editor.defaultFormatter": "SteefH.external-formatters"
     },
     "[css][html][javascript][scss][typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",

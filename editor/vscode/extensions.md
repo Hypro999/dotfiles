@@ -25,6 +25,7 @@
 	- vscjava.vscode-java-dependency
 	- vscjava.vscode-maven
 	- vscjava.vscode-gradle
+	- steefh.external-formatters
 	- vmware.vscode-spring-boot
 	- vscjava.vscode-spring-boot-dashboard
 
