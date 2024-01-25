@@ -12,6 +12,10 @@
 	default = simple
 	autoSetupRemote = true
 [alias]
-	logx = log --oneline --decorate --graph
-	check = log -n 1 --show-signature
+	logx = log --oneline --graph --decorate
+	check = log --show-signature -n 1
 	patch = commit --amend --no-edit
+	fcommit = commit --no-verify
+	famend = commit --amend --no-verify
+	fpatch = commit --amend --no-edit --no-verify
+	wip = fcommit -a -m wip
