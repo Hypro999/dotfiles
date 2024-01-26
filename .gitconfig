@@ -18,4 +18,3 @@
 	fcommit = commit --no-verify
 	famend = commit --amend --no-verify
 	fpatch = commit --amend --no-edit --no-verify
-	wip = fcommit -a -m wip
