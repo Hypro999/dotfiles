@@ -84,7 +84,6 @@
     "java.debug.settings.enableRunDebugCodeLens": false,
     "java.debug.settings.forceBuildBeforeLaunch": true,
     "java.eclipse.downloadSources": true,
-    "java.format.settings.url": "~/.eclipse-formatter.xml",
     "java.maven.downloadSources": true,
     "notebook.lineNumbers": "on",
     "redhat.telemetry.enabled": false,
