@@ -44,6 +44,7 @@
     "terminal.integrated.enablePersistentSessions": false,
     "terminal.integrated.persistentSessionReviveProcess": "never",
     "terminal.integrated.scrollback": 100000,
+    "terminal.integrated.shellIntegration.enabled": false,
     "terminal.integrated.showExitAlert": false,
     "window.menuBarVisibility": "toggle",
     "window.newWindowDimensions": "inherit",
