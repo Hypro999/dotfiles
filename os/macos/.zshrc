@@ -72,8 +72,8 @@ mp3sync () {
 	fi
 }
 
-# git complete / garbage collect branch
-gc() {
+# git reset (complete / garbage collect branch)
+gr() {
     if [ -z "$1" ]; then
         echo "Usage: gc <branch>"
         return 1
