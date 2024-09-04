@@ -73,7 +73,7 @@ mp3sync () {
 }
 
 # git reset (complete / garbage collect branch)
-gr() {
+function gr() {
     if [ -z "$1" ]; then
         echo "Usage: gc <branch>"
         return 1
@@ -96,3 +96,16 @@ gr() {
     # Delete the previously recorded branch
     git branch -d "$current_branch"
 }
+
+function git_branch_name() {
+  branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
+  if [[ $branch == "" ]];
+  then
+    :
+  else
+    echo '('$branch') '
+  fi
+}
+
+setopt PROMPT_SUBST
+PROMPT='%F{cyan}%~%f %F{green}$(git_branch_name)%f%# '
