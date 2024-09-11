@@ -75,7 +75,7 @@ mp3sync () {
 # git reset (complete / garbage collect branch)
 function gr() {
     if [ -z "$1" ]; then
-        echo "Usage: gc <branch>"
+        echo "Usage: gr <branch>"
         return 1
     fi
 
