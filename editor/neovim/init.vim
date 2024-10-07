@@ -61,7 +61,7 @@ call plug#begin()
 
 	if has('nvim')
 		Plug 'nvim-lua/plenary.nvim'
-		Plug 'nvim-telescope/telescope.nvim' { 'tag': '0.1.8' }
+		Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 	endif
 call plug#end()
 
