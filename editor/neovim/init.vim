@@ -19,13 +19,6 @@ set splitright
 set tabstop=4
 set whichwrap=<,>,[,]
 
-if has('win32') || has('win64')
-	set belloff=all
-	set clipboard=unnamed
-	set nobackup
-	set nowritebackup
-endif
-
 syntax enable
 filetype plugin indent on
 
@@ -49,46 +42,18 @@ function! Config()
 endfunction
 nnoremap <silent> <leader>c :call Config()<CR>
 
-" Make escape work as expected when using terminal mode.
-tnoremap <Esc> <C-\><C-n>
-
-" Make it easier to move between panes.
-nnoremap <C-Down> <C-W><C-J>
-nnoremap <C-Up> <C-W><C-K>
-nnoremap <C-Right> <C-W><C-L>
-nnoremap <C-Left> <C-W><C-H>
-
-" Faster keybinds for write/save.
-nnoremap <silent> <leader>w :w <CR>
-
-" Faster keybind for quit (force).
-nnoremap <silent> <leader>q :q! <CR>
-
-" Keybinds for window/pane swapping
-nnoremap <silent> <leader>yw :call WindowSwap#MarkWindowSwap()<CR>
-nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>
-
-" Keybind for trimming trailing whitespace.
-nnoremap <silent> <leader><space> :silent! %s/\s\+$//g<CR>
-
-" Alias vres to vertical res.
-cnoreabbrev <expr> vres 'vertical res'
-
-" :h <space> would autocomplete the command for opening help in a new tab.
-cnoreabbrev <expr> h getcmdtype() == ':' && getcmdline() == 'h' ? 'tab help' : 'h'
-
 " Configure plugins (requires junegunn/vim-plug).
 call plug#begin()
 	Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-commentary'
 	Plug 'tpope/vim-unimpaired'
 	Plug 'tpope/vim-repeat'
+
 	Plug 'tpope/vim-fugitive'
 
 	Plug 'AndrewRadev/linediff.vim'
 	Plug 'wesQ3/vim-windowswap'
 
-	Plug 'Hypro999/ayu-vim' 
 	Plug 'Hypro999/edge' 
 
 	Plug 'vim-airline/vim-airline'
@@ -96,19 +61,13 @@ call plug#begin()
 
 	if has('nvim')
 		Plug 'nvim-lua/plenary.nvim'
-		Plug 'nvim-telescope/telescope.nvim'
-		Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+		Plug 'nvim-telescope/telescope.nvim' { 'tag': '0.1.8' }
 	endif
 call plug#end()
 
-" Colorscheme.
+" Set colorscheme.
 set termguicolors
-let g:ayucolor='mirage'
-colorscheme ayu
-
-" Configure vim-commentary.
-autocmd FileType c,cpp,cuda setlocal commentstring=//\ %s
-autocmd FileType sql setlocal commentstring=--\ %s
+colorscheme edge
 
 " Configure vim-airline.
 let g:airline_theme='deus'
@@ -117,17 +76,34 @@ let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#whitespace#checks=[]
 let g:airline#extensions#tabline#formatter='unique_tail'
 
+" Configure vim-commentary.
+autocmd FileType c,cpp setlocal commentstring=//\ %s
+autocmd FileType sql setlocal commentstring=--\ %s
+
+" Enable keybindings for nvim-telescope.
+if has('nvim')
+	nnoremap <leader>ff <cmd>Telescope find_files<cr>
+	nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+	nnoremap <leader>fb <cmd>Telescope buffers<cr>
+	nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+endif
+
+" Enable keybindings for window/pane swapping through vim-windowswap.
+nnoremap <silent> <leader>yw :call WindowSwap#MarkWindowSwap()<CR>
+nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>
+
+" Make escape work as expected when using terminal mode.
+tnoremap <Esc> <C-\><C-n>
+
+" Add faster keybinding for write/save.
+nnoremap <silent> <leader>w :w <CR>
+
+" Add faster keybinding for quit (force).
+nnoremap <silent> <leader>q :q! <CR>
+
+" Define keybinding for trimming trailing whitespace.
+nnoremap <silent> <leader><space> :silent! %s/\s\+$//g<CR>
+
 " Command to format JSON automatically.
 " Requires the jq command line tool to be on PATH.
 nnoremap <silent> <leader>jq :%!jq<CR>
-
-" Neovim specific configuration using lua.
-if has('nvim')
-lua << 	EOF
-	-- nvim-telescope
-	vim.api.nvim_set_keymap('n', '<leader>ff', ':Telescope find_files<cr>', { noremap = true })
-	vim.api.nvim_set_keymap('n', '<leader>fg', ':Telescope live_grep<cr>', { noremap = true })
-	vim.api.nvim_set_keymap('n', '<leader>fb', ':Telescope buffers<cr>', { noremap = true })
-	vim.api.nvim_set_keymap('n', '<leader>fh', ':Telescope help_tags<cr>', { noremap = true })
-EOF
-endif
