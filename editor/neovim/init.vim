@@ -89,7 +89,7 @@ nnoremap <silent> <leader><space> :silent! %s/\s\+$//g<CR>
 nnoremap <silent> <leader>jq :%!jq<CR>
 
 " Make opening the vim/nvim config file super easy.
-function! ConfigNeovim()
+function! OpenEditorConfig()
     let l:vimrc = ''
     if has('win32') || has('win64')
         if has('nvim')
@@ -106,7 +106,7 @@ function! ConfigNeovim()
     endif
     execute 'e! ' . l:vimrc
 endfunction
-nnoremap <silent> <leader>c :call ConfigNeovim()<CR>
+nnoremap <silent> <leader>c :call OpenEditorConfig()<CR>
 
 " Make opening the tmux config file super easy.
 nnoremap <silent> <leader>t :e! ~/.tmux.conf<CR>
