@@ -22,26 +22,6 @@ set whichwrap=<,>,[,]
 syntax enable
 filetype plugin indent on
 
-" Make opening the vim/nvim config file super easy.
-function! Config()
-	let l:vimrc = ''
-	if has('win32') || has('win64')
-		if has('nvim')
-			let l:vimrc = '~/AppData/Local/nvim/init.vim'
-		else
-			let l:vimrc = '~/_vimrc'
-		endif
-	else
-		if has('nvim')
-			let l:vimrc = '~/.config/nvim/init.vim'
-		else
-			let l:vimrc = '~/.vimrc'
-		endif
-	endif
-	execute 'e! ' . l:vimrc
-endfunction
-nnoremap <silent> <leader>c :call Config()<CR>
-
 " Configure plugins (requires junegunn/vim-plug).
 call plug#begin()
 	Plug 'tpope/vim-surround'
@@ -107,3 +87,26 @@ nnoremap <silent> <leader><space> :silent! %s/\s\+$//g<CR>
 " Command to format JSON automatically.
 " Requires the jq command line tool to be on PATH.
 nnoremap <silent> <leader>jq :%!jq<CR>
+
+" Make opening the vim/nvim config file super easy.
+function! ConfigNeovim()
+    let l:vimrc = ''
+    if has('win32') || has('win64')
+        if has('nvim')
+            let l:vimrc = '~/AppData/Local/nvim/init.vim'
+        else
+            let l:vimrc = '~/_vimrc'
+        endif
+    else
+        if has('nvim')
+            let l:vimrc = '~/.config/nvim/init.vim'
+        else
+            let l:vimrc = '~/.vimrc'
+        endif
+    endif
+    execute 'e! ' . l:vimrc
+endfunction
+nnoremap <silent> <leader>c :call ConfigNeovim()<CR>
+
+" Make opening the tmux config file super easy.
+nnoremap <silent> <leader>t :e! ~/.tmux.conf<CR>
