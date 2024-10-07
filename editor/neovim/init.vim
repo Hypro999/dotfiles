@@ -42,6 +42,8 @@ call plug#begin()
 	if has('nvim')
 		Plug 'nvim-lua/plenary.nvim'
 		Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
+
+		Plug 'nvim-treesitter/nvim-treesitter'
 	endif
 call plug#end()
 
@@ -60,18 +62,6 @@ let g:airline#extensions#tabline#formatter='unique_tail'
 autocmd FileType c,cpp setlocal commentstring=//\ %s
 autocmd FileType sql setlocal commentstring=--\ %s
 
-" Enable keybindings for nvim-telescope.
-if has('nvim')
-	nnoremap <leader>ff <cmd>Telescope find_files<cr>
-	nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-	nnoremap <leader>fb <cmd>Telescope buffers<cr>
-	nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-endif
-
-" Enable keybindings for window/pane swapping through vim-windowswap.
-nnoremap <silent> <leader>yw :call WindowSwap#MarkWindowSwap()<CR>
-nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>
-
 " Make escape work as expected when using terminal mode.
 tnoremap <Esc> <C-\><C-n>
 
@@ -81,12 +71,23 @@ nnoremap <silent> <leader>w :w <CR>
 " Add faster keybinding for quit (force).
 nnoremap <silent> <leader>q :q! <CR>
 
-" Define keybinding for trimming trailing whitespace.
+" Add keybinding to trim trailing whitespace.
 nnoremap <silent> <leader><space> :silent! %s/\s\+$//g<CR>
 
-" Command to format JSON automatically.
-" Requires the jq command line tool to be on PATH.
+" Add keybinding to format JSON through jq.
 nnoremap <silent> <leader>jq :%!jq<CR>
+
+" Add keybindings for window/pane swapping through vim-windowswap.
+nnoremap <silent> <leader>yw :call WindowSwap#MarkWindowSwap()<CR>
+nnoremap <silent> <leader>pw :call WindowSwap#DoWindowSwap()<CR>
+
+" Add keybindings for nvim-telescope.
+if has('nvim')
+	nnoremap <leader>ff <cmd>Telescope find_files<cr>
+	nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+	nnoremap <leader>fb <cmd>Telescope buffers<cr>
+	nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+endif
 
 " Make opening the vim/nvim config file super easy.
 function! OpenEditorConfig()
@@ -110,3 +111,14 @@ nnoremap <silent> <leader>c :call OpenEditorConfig()<CR>
 
 " Make opening the tmux config file super easy.
 nnoremap <silent> <leader>t :e! ~/.tmux.conf<CR>
+
+" Enable syntax highlighting through nvim-treesitter.
+if has('nvim')
+lua<< EOF
+	require'nvim-treesitter.configs'.setup {
+		highlight = {
+			enable = true
+		}
+	}
+EOF
+endif
