@@ -56,6 +56,7 @@
     "workbench.startupEditor": "none",
 
     // Extension specific:
+    "bookmarks.sideBar.countBadge": "off",
     "externalFormatters.languages": {
         "java": {
             "command": "java",
