@@ -6,6 +6,7 @@ set encoding=utf-8
 set hidden
 set ignorecase
 set laststatus=0
+set linebreak
 set mouse=a
 set nohlsearch
 set nowrap
