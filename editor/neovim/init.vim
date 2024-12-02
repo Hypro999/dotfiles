@@ -110,6 +110,9 @@ function! OpenEditorConfig()
 endfunction
 nnoremap <silent> <leader>c :call OpenEditorConfig()<CR>
 
+" Make opening the zshrc config file super easy.
+nnoremap <silent> <leader>z :e! ~/.zshrc<CR>
+
 " Make opening the tmux config file super easy.
 nnoremap <silent> <leader>t :e! ~/.tmux.conf<CR>
 
