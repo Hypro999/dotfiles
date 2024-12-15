@@ -1,5 +1,6 @@
 alias la="ls -a"
 alias cls="clear"
+alias now="python -c 'import time; print(int(time.time_ns() / 10e6))'"
 
 export PATH=$PATH:~/.local/bin
 export EDITOR=/opt/homebrew/bin/nvim
@@ -26,51 +27,9 @@ source /Library/Frameworks/Python.framework/Versions/3.12/bin/virtualenvwrapper.
 # Node
 export NODE_PATH=$(npm root --quiet -g)
 
-# SSH into Google Pixel 8
-alias pixel="ssh -p 8022 u0_a295@10.0.0.164"
-
 # JVM
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/liberica-jdk-21-full.jdk/Contents/Home
 export SCALA_HOME=/opt/homebrew/opt/scala/idea
-
-# MySQL
-export PATH="$PATH:/opt/homebrew/opt/mysql-client/bin"
-
-# Music
-mp3download () {
-	workon ytdlp
-	python ~/Code/Tools/ytdlpw.py
-}
-
-mp3tag () {
-	workon ytdlp
-	python ~/Code/Tools/tag.py
-}
-
-mp3sync () {
-	if [ -d "/Volumes/One Touch" ]; then
-		echo "======================"
-		echo "Syncing with One Touch"
-		echo "======================"
-		rsync -aP "/Users/hemanth/Music/Volume 9" "/Volumes/One Touch/Music"
-	else
-		echo "======================="
-		echo "One Touch not available"
-		echo "======================="
-	fi
-	if [ "$(nmap -A 10.0.0.164 -p 8022 | grep open)" = "8022/tcp open  ssh     OpenSSH 9.5 (protocol 2.0)" ]; then
-		echo
-		echo "==========================="
-		echo "Syncing with Google Pixel 8"
-		echo "==========================="
-		rsync -aP "/Users/hemanth/Music/Volume 9" u0_a295@10.0.0.164:'"/data/data/com.termux/files/home/storage/music"'
-	else
-		echo
-		echo "============================"
-		echo "Google Pixel 8 not available"
-		echo "============================"
-	fi
-}
 
 # git reset (complete / garbage collect branch)
 function gr() {
@@ -97,6 +56,7 @@ function gr() {
     git branch -d "$current_branch"
 }
 
+# Add git branch name to prompt.
 function git_branch_name() {
   branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
   if [[ $branch == "" ]];
@@ -106,6 +66,5 @@ function git_branch_name() {
     echo '('$branch') '
   fi
 }
-
 setopt PROMPT_SUBST
 PROMPT='%F{cyan}%~%f %F{green}$(git_branch_name)%f%# '
