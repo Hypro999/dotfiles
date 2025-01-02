@@ -1,6 +1,8 @@
 alias la="ls -a"
 alias cls="clear"
-alias now="python -c 'import time; print(int(time.time_ns() / 10e6))'"
+
+# Get current unix timestamp in milliseconds.
+alias now="python -c 'import time; print(int(time.time_ns() / (10**6)))'"
 
 export PATH=$PATH:~/.local/bin
 export EDITOR=/opt/homebrew/bin/nvim
