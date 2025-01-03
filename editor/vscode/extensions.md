@@ -4,8 +4,7 @@
 
 ### Git
 - mhutchie.git-graph
-- waderyan.gitblame
-- donjayamanne.githistory
+- maattdd.gitless
 
 ### Themes
 - github.github-vscode-theme
