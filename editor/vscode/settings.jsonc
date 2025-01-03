@@ -69,8 +69,7 @@
             ]
         }
     },
-    "gitblame.infoMessageFormat": "[#${commit.hash_short, 7}] ${commit.summary}",
-    "gitblame.statusBarMessageFormat": "${author.name} (${time.ago})",
+    "gitlens.codeLens.enabled": false,
     "go.toolsManagement.checkForUpdates": "off",
     "java.codeGeneration.insertionLocation": "lastMember",
     "java.compile.nullAnalysis.mode": "automatic",
