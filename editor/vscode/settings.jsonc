@@ -23,19 +23,22 @@
     "files.exclude": {
         "**/.vscode": true,
         "**/target": true,
-        "**/__pycache__": true
+        "**/__pycache__": true,
+        "**/.gradle": true
     },
     "files.watcherExclude": {
         "**/.vscode": true,
         "**/target": true,
-        "**/__pycache__": true
+        "**/__pycache__": true,
+        "**/.gradle": true
     },
     "git.inputValidationSubjectLength": 72,
     "git.mergeEditor": false,
     "search.exclude": {
         "**/.vscode": true,
         "**/target": true,
-        "**/__pycache__": true
+        "**/__pycache__": true,
+        "**/.gradle": true
     },
     "search.useGlobalIgnoreFiles": true,
     "security.workspace.trust.banner": "never",
