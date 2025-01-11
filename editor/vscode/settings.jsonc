@@ -24,12 +24,20 @@
         "**/.vscode": true,
         "**/target": true,
         "**/__pycache__": true,
-        "**/.gradle": true
+        "build": true,
+        "*/build": true,
+        "**/gradle": true,
+        "**/.gradle": true,
+        "gradlew": true,
+        "gradlew.bat": true
     },
     "files.watcherExclude": {
         "**/.vscode": true,
         "**/target": true,
         "**/__pycache__": true,
+        "build": true,
+        "*/build": true,
+        "**/gradle": true,
         "**/.gradle": true
     },
     "git.inputValidationSubjectLength": 72,
@@ -38,6 +46,9 @@
         "**/.vscode": true,
         "**/target": true,
         "**/__pycache__": true,
+        "build": true,
+        "*/build": true,
+        "**/gradle": true,
         "**/.gradle": true
     },
     "search.useGlobalIgnoreFiles": true,
