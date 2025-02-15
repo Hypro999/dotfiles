@@ -18,7 +18,7 @@ vim.opt.rtp:append(lazypath)
 -- Setup lazy.nvim
 require("lazy").setup({
 	spec = {
-		-- Basic/Essential Functionality
+		-- Essential
 		{ "tpope/vim-repeat" },
 		{ "tpope/vim-surround" },
 		{ "tpope/vim-unimpaired" },
@@ -32,22 +32,8 @@ require("lazy").setup({
 			end
 		},
 
-		-- Theme
-		{
-			"rebelot/kanagawa.nvim",
-			config = function()
-				vim.cmd.colorscheme("kanagawa")
-			end
-		},
-		{
-			 "nvim-lualine/lualine.nvim",
-			 config = function()
-				require("lualine").setup()
-			 end,
-			 dependencies = { "nvim-tree/nvim-web-devicons" }
-		},
-
 		-- Advanced
+		{ "tpope/vim-fugitive" },
 		{ "nvim-lua/plenary.nvim" },
 		{
 			"nvim-telescope/telescope.nvim",
@@ -63,13 +49,39 @@ require("lazy").setup({
 			"nvim-treesitter/nvim-treesitter",
 			config = function()
 				require("nvim-treesitter.configs").setup({
-					highlight = {
-						enable = true
-					}
+					auto_install = true,
+					highlight = { enable = true },
+					indent = { enable = true }
 				})
 			end
+		},
+
+		-- Theme
+		{
+			"rebelot/kanagawa.nvim",
+			config = function()
+				vim.cmd.colorscheme("kanagawa")
+			end
+		},
+		{
+			 "nvim-lualine/lualine.nvim",
+			 config = function()
+				require("lualine").setup({
+					tabline = {
+						lualine_a = { "buffers" },
+						lualine_z = { "tabs" }
+					},
+					sections = {
+						lualine_a = { "mode" },
+						lualine_b = { "branch", "diff" },
+						lualine_x = { "filename" },
+						lualine_y = { "filetype" },
+						lualine_z = { "location" }
+					},
+				})
+			 end,
+			 dependencies = { "nvim-tree/nvim-web-devicons" }
 		}
 	}
 })
-
 

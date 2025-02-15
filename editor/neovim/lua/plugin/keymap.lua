@@ -1,3 +1,9 @@
+-- Clear search highlighting.
+vim.keymap.set("n", "<leader><leader>", vim.cmd.noh)
+
+-- Have <Esc> work as expected in terminal mode.
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+
 -- Define mappings to enable quickly opening neovim config files.
 vim.keymap.set("n", "<leader>c",
 	function()
