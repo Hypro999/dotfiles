@@ -24,30 +24,30 @@ vim.keymap.set("n", "<leader>li", function()
 vim.keymap.set("n", "<leader>lr", function()
         vim.lsp.buf.references(nil, ({ loclist = true }))
     end)
-vim.keymap.set("n", "<leader>rr", vim.lsp.buf.rename)
+vim.keymap.set("n", "<leader>ln", vim.lsp.buf.rename)
 vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action)
 
 -- Define mappings to quickly open neovim config files.
-vim.keymap.set("n", "<leader><C-c>",
+vim.keymap.set("n", "<leader><leader>c",
     function()
         vim.cmd.edit(vim.env.MYVIMRC)
     end)
-vim.keymap.set("n", "<leader><C-k>",
+vim.keymap.set("n", "<leader><leader>k",
     function()
         vim.cmd.edit(vim.fn.stdpath("config") .. "/plugin/keymap.lua")
     end)
-vim.keymap.set("n", "<leader><C-p>",
+vim.keymap.set("n", "<leader><leader>p",
     function()
         vim.cmd.edit(vim.fn.stdpath("config") .. "/lua/plugins.lua")
         vim.fn.search("require(\"lazy\").setup")
     end)
 
 -- Define mappings to quickly open shell config files.
-vim.keymap.set("n", "<leader><C-z>",
+vim.keymap.set("n", "<leader><leader>z",
     function()
         vim.cmd.edit("~/.zshrc")
     end)
-vim.keymap.set("n", "<leader><C-b>",
+vim.keymap.set("n", "<leader><leader>b",
     function()
         vim.cmd.edit("~/.bashrc")
     end)
