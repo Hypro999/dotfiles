@@ -4,6 +4,11 @@ vim.opt.shortmess = "Ic"
 -- Display relative line numbers.
 vim.opt.relativenumber = true
 
+-- By default stick to indentation with 4 spaces.
+vim.opt.expandtab = true
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+
 -- Configure search settings.
 --   * Disable highlighting search results.
 --   * Default to case insensitive searching unless we use uppercase characters.
@@ -18,9 +23,12 @@ vim.opt.splitright = true
 -- When wrapping text, break at the word boundary.
 vim.opt.linebreak = true
 
+-- Configure how completion works.
+vim.opt.completeopt = { "noinsert", "menuone" }
+
 -- Use the system clipboard by default for all operations, if possible.
 if vim.fn.has("clipboard") then
-	vim.opt.clipboard = "unnamedplus"
+    vim.opt.clipboard = "unnamedplus"
 end
 
 -- Disable the unnecessary Neovim providers.
