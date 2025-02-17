@@ -28,27 +28,17 @@ vim.keymap.set("n", "<leader>ln", vim.lsp.buf.rename)
 vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action)
 
 -- Define mappings to quickly open neovim config files.
-vim.keymap.set("n", "<leader><leader>c",
+vim.keymap.set("n", "<leader>vc",
     function()
         vim.cmd.edit(vim.env.MYVIMRC)
     end)
-vim.keymap.set("n", "<leader><leader>k",
+vim.keymap.set("n", "<leader>vk",
     function()
         vim.cmd.edit(vim.fn.stdpath("config") .. "/plugin/keymap.lua")
     end)
-vim.keymap.set("n", "<leader><leader>p",
+vim.keymap.set("n", "<leader>vp",
     function()
         vim.cmd.edit(vim.fn.stdpath("config") .. "/lua/plugins.lua")
         vim.fn.search("require(\"lazy\").setup")
-    end)
-
--- Define mappings to quickly open shell config files.
-vim.keymap.set("n", "<leader><leader>z",
-    function()
-        vim.cmd.edit("~/.zshrc")
-    end)
-vim.keymap.set("n", "<leader><leader>b",
-    function()
-        vim.cmd.edit("~/.bashrc")
     end)
 
