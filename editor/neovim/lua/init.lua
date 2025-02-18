@@ -12,7 +12,6 @@ vim.opt.shiftwidth = 4
 -- Configure search settings.
 --   * Disable highlighting search results.
 --   * Default to case insensitive searching unless we use uppercase characters.
--- vim.opt.hlsearch = false
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 

@@ -7,7 +7,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
         vim.api.nvim_echo({
             { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
             { out, "WarningMsg" },
-            { "\nPress any key to exit..." },
+            { "\nPress any key to exit..." }
         }, true, {})
         vim.fn.getchar()
         os.exit(1)
@@ -16,7 +16,7 @@ end
 vim.opt.rtp:append(lazypath)
 
 -- Setup lazy.nvim
-require("lazy").setup({
+require("lazy").setup {
     rocks = {
         enabled = false
     },
@@ -29,14 +29,25 @@ require("lazy").setup({
             "wesQ3/vim-windowswap",
             config = function()
                 vim.g.windowswap_map_keys = 0
-                vim.keymap.set("n", "<leader>y", vim.fn["WindowSwap#MarkWindowSwap"])
-                vim.keymap.set("n", "<leader>p", vim.fn["WindowSwap#DoWindowSwap"])
-                vim.keymap.set("n", "<leader>w", vim.fn["WindowSwap#EasyWindowSwap"])
+                vim.keymap.set("n", "<leader>wy", vim.fn["WindowSwap#MarkWindowSwap"])
+                vim.keymap.set("n", "<leader>wp", vim.fn["WindowSwap#DoWindowSwap"])
+                vim.keymap.set("n", "<leader>ww", vim.fn["WindowSwap#EasyWindowSwap"])
             end
         },
 
-        -- Advanced
-        { "nvim-lua/plenary.nvim" },
+        -- Treesitter
+        {
+            "nvim-treesitter/nvim-treesitter",
+            config = function()
+                require("nvim-treesitter.configs").setup {
+                    auto_install = true,
+                    highlight = { enable = true },
+                    indent = { enable = true }
+                }
+            end
+        },
+
+        -- Navigation
         {
             "nvim-telescope/telescope.nvim",
             config = function()
@@ -45,23 +56,18 @@ require("lazy").setup({
                 vim.keymap.set("n", "<leader>fg", builtin.live_grep)
                 vim.keymap.set("n", "<leader>fb", builtin.buffers)
                 vim.keymap.set("n", "<leader>fh", builtin.help_tags)
-            end
+            end,
+            dependencies = { "nvim-lua/plenary.nvim" }
         },
-        {
-            "nvim-treesitter/nvim-treesitter",
-            config = function()
-                require("nvim-treesitter.configs").setup({
-                    auto_install = true,
-                    highlight = { enable = true },
-                    indent = { enable = true }
-                })
-            end
-        },
-        { "neovim/nvim-lspconfig" },
-        { "mfussenegger/nvim-jdtls" },
+
+        -- Git
         { "tpope/vim-fugitive" },
 
-        -- Theme
+        -- LSP
+        { "neovim/nvim-lspconfig" },
+        { "mfussenegger/nvim-jdtls" },
+
+        -- UI
         {
             "rebelot/kanagawa.nvim",
             config = function()
@@ -71,7 +77,7 @@ require("lazy").setup({
         {
              "nvim-lualine/lualine.nvim",
              config = function()
-                require("lualine").setup({
+                require("lualine").setup {
                     tabline = {
                         lualine_a = { "buffers" },
                         lualine_z = { "tabs" }
@@ -82,11 +88,11 @@ require("lazy").setup({
                         lualine_x = { "filename" },
                         lualine_y = { "filetype" },
                         lualine_z = { "location" }
-                    },
-                })
+                    }
+                }
              end,
              dependencies = { "nvim-tree/nvim-web-devicons" }
         }
     }
-})
+}
 
