@@ -4,6 +4,8 @@
 # Neovim
 *~
 Session.vim
+lazy-lock.json
 
 # VS Code
 .vscode
+
