@@ -8,6 +8,12 @@ vim.keymap.set("n", "<leader><leader>", vim.cmd.noh)
 vim.keymap.set("n", "<leader>qc", vim.cmd.cclose)
 vim.keymap.set("n", "<leader>ql", vim.cmd.lclose)
 
+-- Define mappings to leverage nvim-treesitter-context.
+vim.keymap.set("n", "<leader>cc", require("treesitter-context").toggle)
+vim.keymap.set("n", "[c", function()
+    require("treesitter-context").go_to_context(vim.v.count1)
+end)
+
 -- Define LSP mappings.
 vim.keymap.set("n", "<leader>h", vim.lsp.buf.hover)
 vim.keymap.set("n", "<leader>d", function()
