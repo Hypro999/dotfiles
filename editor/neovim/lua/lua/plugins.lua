@@ -47,7 +47,16 @@ require("lazy").setup {
             end
         },
         {
-            "nvim-treesitter/nvim-treesitter-context"
+            "nvim-treesitter/nvim-treesitter-context",
+            config = function()
+                local context = require("treesitter-context")
+                -- Toggle context windows.
+                vim.keymap.set("n", "<leader>cc", context.toggle)
+                -- Jump up to parent context if it is off-screen.
+                vim.keymap.set("n", "[c", function()
+                        context.go_to_context(vim.v.count1)
+                    end)
+            end
         },
 
         -- Navigation
