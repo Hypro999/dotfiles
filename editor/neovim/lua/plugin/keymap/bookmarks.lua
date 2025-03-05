@@ -12,4 +12,8 @@ vim.keymap.set("n", "<leader>3",
         vim.cmd.edit(vim.fn.stdpath("config") .. "/lua/plugins.lua")
         vim.fn.search('require("lazy").setup')
     end)
+vim.keymap.set("n", "<leader>4",
+    function()
+        vim.cmd.edit(vim.fn.stdpath("config") .. "/ftplugin")
+    end)
 
