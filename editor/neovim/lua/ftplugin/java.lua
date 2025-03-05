@@ -1,8 +1,8 @@
-local jdtls_script = "/opt/homebrew/bin/jdtls"
+local JDTLS_SCRIPT = "/opt/homebrew/bin/jdtls"
 
-if vim.uv.fs_stat(jdtls_script) then
+if vim.uv.fs_stat(JDTLS_SCRIPT) then
     require("jdtls").start_or_attach {
-        cmd = { jdtls_script }
+        cmd = { JDTLS_SCRIPT }
     }
 end
 
