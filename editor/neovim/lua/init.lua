@@ -2,16 +2,17 @@
 vim.opt.shortmess = "Ic"
 
 -- Display relative line numbers.
+-- But show absolute line number for current line.
+vim.opt.number = true
 vim.opt.relativenumber = true
 
--- By default stick to indentation with 4 spaces.
+-- By default, stick to indentation with 4 spaces.
 vim.opt.expandtab = true
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 
 -- Configure search settings.
---   * Disable highlighting search results.
---   * Default to case insensitive searching unless we use uppercase characters.
+-- Default to case insensitive searching unless we use uppercase characters.
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
@@ -23,6 +24,8 @@ vim.opt.splitright = true
 vim.opt.linebreak = true
 
 -- Configure how completion works.
+-- Don't insert the suggestion until explicitly selected.
+-- Always show the completion menu, even if there's only one option.
 vim.opt.completeopt = { "noinsert", "menuone" }
 
 -- Use the system clipboard by default for all operations, if possible.
