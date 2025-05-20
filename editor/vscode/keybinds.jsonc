@@ -177,10 +177,5 @@
   {
     "key": "cmd+8",
     "command": "-workbench.action.focusEighthEditorGroup"
-  },
-  // Other stuff:
-  {
-    "key": "alt+cmd+g l",
-    "command": "gitlens.toggleLineBlame"
   }
 ]

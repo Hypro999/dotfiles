@@ -22,9 +22,8 @@ require("lazy").setup {
     },
     spec = {
         -- Essential
-        { "tpope/vim-repeat" },
         { "tpope/vim-surround" },
-        { "tpope/vim-unimpaired" },
+        { "tpope/vim-repeat" },
         {
             "wesQ3/vim-windowswap",
             config = function()
@@ -64,12 +63,7 @@ require("lazy").setup {
             "nvim-treesitter/nvim-treesitter-context",
             config = function()
                 local context = require("treesitter-context")
-                -- Toggle context windows.
-                vim.keymap.set("n", "<leader>cc", context.toggle)
-                -- Jump up to parent context if it is off-screen.
-                vim.keymap.set("n", "[c", function()
-                        context.go_to_context(vim.v.count1)
-                    end)
+                vim.keymap.set("n", "<leader>-", context.toggle)
             end
         },
 
@@ -89,10 +83,6 @@ require("lazy").setup {
         -- Git
         { "tpope/vim-fugitive" },
 
-        -- LSP
-        { "neovim/nvim-lspconfig" },
-        { "mfussenegger/nvim-jdtls" },
-
         -- UI
         {
             "rebelot/kanagawa.nvim",
@@ -111,6 +101,7 @@ require("lazy").setup {
                     sections = {
                         lualine_a = { "mode" },
                         lualine_b = { "branch", "diff" },
+                        lualine_c = { },
                         lualine_x = { "filename" },
                         lualine_y = { "filetype" },
                         lualine_z = { "location" }
@@ -121,4 +112,3 @@ require("lazy").setup {
         }
     }
 }
-

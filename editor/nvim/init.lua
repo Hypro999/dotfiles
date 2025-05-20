@@ -2,7 +2,7 @@
 vim.opt.shortmess = "Ic"
 
 -- Display relative line numbers.
--- But show absolute line number for current line.
+-- But show the absolute line number for current line.
 vim.opt.number = true
 vim.opt.relativenumber = true
 
@@ -39,6 +39,9 @@ vim.g.loaded_ruby_provider = 0
 vim.g.loaded_node_provider = 0
 vim.g.loaded_python3_provider = 0
 
+-- Apply custom keybinds.
+require("keybinds")
+
 -- Use lazy.nvim for plugin management.
 --
 -- lazy.nvim is pretty parasitic. It takes over the standard startup process.
@@ -61,4 +64,3 @@ vim.g.loaded_python3_provider = 0
 -- (resulting in an annoying error message, but no loop because `setup` from
 -- lazy.nvim has a countermeasure).
 require("plugins")
-
