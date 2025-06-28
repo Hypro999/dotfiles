@@ -1,9 +1,3 @@
-alias la="ls -a"
-alias cls="clear"
-
-# Get current unix timestamp in milliseconds.
-alias now="python -c 'import time; print(int(time.time_ns() / (10**6)))'"
-
 export PATH=$PATH:~/.local/bin
 export EDITOR=/opt/homebrew/bin/nvim
 
@@ -16,27 +10,40 @@ autoload -Uz compinit
 compinit
 
 # FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
 bindkey "ç" fzf-cd-widget
+
+# JVM
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/liberica-jdk-21.jdk/Contents/Home
+export GRAALVM_HOME=/Library/Java/JavaVirtualMachines/graalvm-21.jdk/Contents/Home
+export SCALA_HOME=/opt/homebrew/opt/scala/idea
+
+# Python
+export WORKON_HOME=$HOME/.virtualenvs
+source /Library/Frameworks/Python.framework/Versions/3.12/bin/virtualenvwrapper.sh
 
 # Go
 export GOPATH=~/.local/go
 
-# Python virtualenvwrapper
-export WORKON_HOME=$HOME/.virtualenvs
-source /Library/Frameworks/Python.framework/Versions/3.12/bin/virtualenvwrapper.sh
-
 # Node
 export NODE_PATH=$(npm root --quiet -g)
 
-# JVM
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/liberica-jdk-21-full.jdk/Contents/Home
-export SCALA_HOME=/opt/homebrew/opt/scala/idea
+# Haskell
+export PATH="$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
 
-# git reset (complete / garbage collect branch)
-function gr() {
+# MySQL
+export PATH="$PATH:/opt/homebrew/opt/mysql-client/bin"
+
+# Shortcuts
+alias now="python -c 'import time; print(int(time.time_ns() / 10e6))'"
+
+# git reset
+#
+# switch to the specified branch, pull it, then delete
+# the branch you were previously on.
+gr() {
     if [ -z "$1" ]; then
-        echo "Usage: gr <branch>"
+        echo "Usage: gc <branch-to-switch-to>"
         return 1
     fi
 
@@ -58,15 +65,3 @@ function gr() {
     git branch -d "$current_branch"
 }
 
-# Add git branch name to prompt.
-function git_branch_name() {
-  branch=$(git symbolic-ref HEAD 2> /dev/null | awk 'BEGIN{FS="/"} {print $NF}')
-  if [[ $branch == "" ]];
-  then
-    :
-  else
-    echo '('$branch') '
-  fi
-}
-setopt PROMPT_SUBST
-PROMPT='%F{cyan}%~%f %F{green}$(git_branch_name)%f%# '
