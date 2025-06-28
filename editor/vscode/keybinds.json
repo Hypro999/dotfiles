@@ -1,0 +1,120 @@
+{
+    "[css][html][javascript][scss][typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2
+    },
+    "[go]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "always"
+        },
+        "editor.insertSpaces": false
+    },
+    "[java]": {
+        "editor.rulers": [
+            100
+        ]
+    },
+    "[json][jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "always"
+        },
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.rulers": [
+            88
+        ]
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "bookmarks.sideBar.countBadge": "off",
+    "chat.commandCenter.enabled": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.accessibilitySupport": "off",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.detectIndentation": false,
+    "editor.fontFamily": "'SF Pro Mono', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 16,
+    "editor.formatOnSave": true,
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.insertSpaces": true,
+    "editor.lineNumbers": "relative",
+    "editor.minimap.enabled": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.rulers": [],
+    "editor.smoothScrolling": true,
+    "editor.tabSize": 4,
+    "editor.wordWrap": "off",
+    "explorer.autoReveal": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "extensions.ignoreRecommendations": true,
+    "files.exclude": {
+        "**/.gradle": true,
+        "**/.idea": true,
+        "**/.vscode": true,
+        "**/__pycache__": true,
+        "**/gradle": true,
+        "**/target": true,
+        "**/build": true,
+        "gradlew": true,
+        "gradlew.bat": true
+    },
+    "files.insertFinalNewline": true,
+    "files.watcherExclude": {
+        "**/.gradle": true,
+        "**/.idea": true,
+        "**/.vscode": true,
+        "**/__pycache__": true,
+        "**/gradle": true,
+        "**/target": true,
+        "**/build": true,
+    },
+    "git.inputValidationSubjectLength": 72,
+    "git.mergeEditor": false,
+    "gitlens.codeLens.enabled": false,
+    "go.toolsManagement.checkForUpdates": "off",
+    "java.codeGeneration.insertionLocation": "lastMember",
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.configuration.runtimes": [],
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.debug.settings.enableRunDebugCodeLens": false,
+    "java.debug.settings.forceBuildBeforeLaunch": true,
+    "java.eclipse.downloadSources": true,
+    "java.format.settings.url": "~/.eclipse-formatter.xml",
+    "java.maven.downloadSources": true,
+    "notebook.lineNumbers": "on",
+    "redhat.telemetry.enabled": false,
+    "search.exclude": {
+        "**/.gradle": true,
+        "**/.idea": true,
+        "**/.vscode": true,
+        "**/__pycache__": true,
+        "**/gradle": true,
+        "**/target": true,
+        "**/build": true,
+    },
+    "search.useGlobalIgnoreFiles": true,
+    "security.workspace.trust.banner": "never",
+    "spring-boot.ls.problem.version-validation.UPDATE_LATEST_MAJOR_VERSION": "IGNORE",
+    "spring-boot.ls.problem.version-validation.UPDATE_LATEST_MINOR_VERSION": "IGNORE",
+    "spring-boot.ls.problem.version-validation.UPDATE_LATEST_PATCH_VERSION": "IGNORE",
+    "telemetry.telemetryLevel": "off",
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "terminal.integrated.enablePersistentSessions": false,
+    "terminal.integrated.persistentSessionReviveProcess": "never",
+    "terminal.integrated.scrollback": 100000,
+    "terminal.integrated.shellIntegration.enabled": false,
+    "terminal.integrated.showExitAlert": false,
+    "vim.foldfix": true,
+    "vim.useSystemClipboard": true,
+    "window.newWindowDimensions": "inherit",
+    "window.title": "${rootName}",
+    "workbench.colorTheme": "GitHub Dark Dimmed",
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.list.smoothScrolling": true,
+    "workbench.startupEditor": "none"
+}
