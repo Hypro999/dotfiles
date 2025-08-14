@@ -70,4 +70,4 @@ pcall(require, "local.init")
 -- trying to load itself and then we get into an infinite loop (which is
 -- broken by a check performed in lazy.nvim, but this results in a warning
 -- message during startup).
-require("plugins")
+require("plugins.init")

@@ -21,7 +21,7 @@ vim.keymap.set("n", "<leader>2",
     end)
 vim.keymap.set("n", "<leader>3",
     function()
-        vim.cmd.edit(vim.fn.stdpath("config") .. "/lua/plugins.lua")
+        vim.cmd.edit(vim.fn.stdpath("config") .. "/lua/plugins")
         vim.fn.search('require("lazy").setup')
     end)
 vim.keymap.set("n", "<leader>4",
