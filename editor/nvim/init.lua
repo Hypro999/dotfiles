@@ -44,23 +44,27 @@ require("keybinds")
 
 -- Use lazy.nvim for plugin management.
 --
--- lazy.nvim is pretty parasitic. It takes over the standard startup process.
--- But it's a good parasite (so, it's a symbiont?).
+-- See:
+-- 1. `:help startup`
+-- 2. `:help lazy.nvim-🚀-usage-▶️-startup-sequence`
+-- for the implications of doing this.
+-- lazy.nvim takes over the Neovim startup sequence.
 --
--- Normally, following `:help startup`, the vimrc (this file) is sourced during
--- Step 7 and plugins would loaded in Step 10. But by calling our
--- bootstrap/config script for lazy.nvim, which in turn calls the `setup`
--- function from the lazy.nvim lua module, we can distrupt the natural startup
--- process. This is when the symbiont that is lazy.nvim begins its work.
+-- Normally, the vimrc (this file) is sourced during Step 7 of startup and
+-- plugins would be loaded in Step 10. But by calling our bootstrap/config
+-- script for lazy.nvim, which in turn calls the `setup` function from the
+-- lazy.nvim lua module, we will distrupt the remainder of the normal
+-- startup process.
 --
--- It basically sets `vim.go.loadplugins` to false which disables step 10
--- entirely. Instead, lazy.nvim will then *mimic* the things that Neovim would
--- normally do (e.g. basically call `:runtime! plugin/**/*.{vim,lua}` but take
--- into account `/after`).
+-- lazy.nvim basically sets `vim.go.loadplugins` to false which disables
+-- Step 10 entirely. Instead, lazy.nvim will then mimic the things that
+-- Neovim would normally do.
 --
--- This is why we can't just stick the bootstrap/config script in `plugin/`,
--- it's because lazy.nvim needs to take over the process, otherwise it would
--- end up loading our bootstrap file which would load lazy.nvim again
--- (resulting in an annoying error message, but no loop because `setup` from
--- lazy.nvim has a countermeasure).
+-- This is why we can't just stick the bootstrap/config script in `plugin/`.
+-- It's because lazy.nvim needs to take over the process. Otherwise, what
+-- happens is that Neovim will load all plugins which will load lazy.nvim
+-- which will then try to load all plugins which will result in lazy.nvim
+-- trying to load itself and then we get into an infinite loop (which is
+-- broken by a check performed in lazy.nvim, but this results in a warning
+-- message during startup).
 require("plugins")
