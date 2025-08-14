@@ -42,6 +42,9 @@ vim.g.loaded_python3_provider = 0
 -- Apply custom keybinds.
 require("keybinds")
 
+-- Local per-user/machine overrides.
+pcall(require, "local.init")
+
 -- Use lazy.nvim for plugin management.
 --
 -- See:

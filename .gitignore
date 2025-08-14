@@ -5,6 +5,7 @@
 *~
 Session.vim
 lazy-lock.json
+editor/nvim/lua/local
 
 # VS Code
 .vscode
