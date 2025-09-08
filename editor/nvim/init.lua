@@ -3,8 +3,8 @@ vim.opt.shortmess = "Ic"
 
 -- Display relative line numbers.
 -- But show the absolute line number for current line.
-vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.number = true
 
 -- By default, stick to indentation with 4 spaces.
 vim.opt.expandtab = true
