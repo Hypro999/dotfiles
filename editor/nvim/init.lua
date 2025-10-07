@@ -2,13 +2,12 @@
 vim.opt.shortmess = "Ic"
 
 -- Display relative line numbers.
--- But show the absolute line number for current line.
+-- Show the absolute line number for the current line.
 vim.opt.relativenumber = true
 vim.opt.number = true
 
--- Use spaces in place of tabs when editing.
--- Use 8 columns to display actual tab characters (default value for tabstop).
--- Use 4 spaces using <Tab>, <BS>, >>, <<, autoindent, etc.
+-- Use 4 spaces in place of tabs when editing.
+-- Continue to display hard tabs using 8 columns (default value for tabstop).
 vim.opt.expandtab = true
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
