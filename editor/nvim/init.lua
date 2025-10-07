@@ -6,7 +6,9 @@ vim.opt.shortmess = "Ic"
 vim.opt.relativenumber = true
 vim.opt.number = true
 
--- By default, stick to indentation with 4 spaces.
+-- Use spaces in place of tabs when editing.
+-- Use 8 columns to display actual tab characters (default value for tabstop).
+-- Use 4 spaces using <Tab>, <BS>, >>, <<, autoindent, etc.
 vim.opt.expandtab = true
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
