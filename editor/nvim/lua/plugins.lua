@@ -42,7 +42,8 @@ require("lazy").setup {
                     ensure_installed = {
                         "c", "lua", "markdown", "markdown_inline", "query", "vim", "vimdoc",
                         "json", "yaml", "xml",
-                        "python", "java", "go", "haskell"
+                        "python", "java", "go", "haskell",
+                        "html", "css", "scss", "javascript", "typescript"
                     },
                     auto_install = true,
                     highlight = { enable = true },
