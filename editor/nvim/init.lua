@@ -52,14 +52,14 @@ require("keybinds")
 -- lazy.nvim takes over the Neovim startup sequence.
 --
 -- Normally, the vimrc (this file) is sourced during Step 7 of startup and
--- plugins would be loaded in Step 10. But by calling our bootstrap/config
+-- plugins would be loaded in Step 11. But by calling our bootstrap/config
 -- script for lazy.nvim, which in turn calls the `setup` function from the
--- lazy.nvim lua module, we will distrupt the remainder of the normal
+-- lazy.nvim lua module, we will disrupt the remainder of the normal
 -- startup process.
 --
--- lazy.nvim basically sets `vim.go.loadplugins` to false which disables
--- Step 10 entirely. Instead, lazy.nvim will then mimic the things that
--- Neovim would normally do.
+-- lazy.nvim basically sets `vim.go.loadplugins` to false (see
+-- `:help 'loadplugins'`) which disables Step 11 entirely. Instead, lazy.nvim
+-- will then mimic the things that Neovim would normally do.
 --
 -- This is why we can't just stick the bootstrap/config script in `plugin/`.
 -- It's because lazy.nvim needs to take over the process. Otherwise, what
