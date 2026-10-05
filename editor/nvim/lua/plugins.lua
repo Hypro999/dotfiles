@@ -93,9 +93,6 @@ require("lazy").setup {
             dependencies = { "nvim-lua/plenary.nvim" }
         },
 
-        -- Git
-        { "tpope/vim-fugitive" },
-
         -- UI
         {
             "rebelot/kanagawa.nvim",
