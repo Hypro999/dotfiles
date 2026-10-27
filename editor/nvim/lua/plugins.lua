@@ -41,21 +41,17 @@ require("lazy").setup {
                 require("nvim-treesitter.configs").setup {
                     ensure_installed = {
                         -- Default parsers included with the nvim installation:
-                        "c", "lua", "markdown", "markdown_inline", "query", "vim", "vimdoc",
-                        -- Serialization formats:
-                        "json", "jsonc", "csv",
-                        -- Markup languages:
-                        "yaml", "xml",
-                        -- Config languages:
-                        "toml", "gomod", "ini",
+                        "c", "lua", "markdown_inline", "markdown", "query", "vim", "vimdoc",
+                        -- Serialization formats, config languages, markup languages, etc.:
+                        "csv", "json", "jsonc", "yaml", "xml", "toml", "gomod", "ini", "proto", "smithy",
                         -- Backend programming languages:
-                        "rust", "go", "java", "kotlin", "python", "haskell",
-                        -- Frontend programming languages:
+                        "rust", "go", "java", "python", "haskell",
+                        -- Frontend languages:
                         "html", "css", "scss", "javascript", "typescript",
                         -- Git:
                         "git_config", "git_rebase", "gitcommit", "gitignore",
                         -- Misc:
-                        "bash"
+                        "bash", "kotlin"
                     },
                     auto_install = true,
                     highlight = { enable = true },
